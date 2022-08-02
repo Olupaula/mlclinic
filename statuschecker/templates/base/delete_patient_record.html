@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>Delete Patient Record</title>{% endblock %}
+{% block body %}
+<div class="edit_patient_another" >
+    <p>see a different <a href="{% url 'see_a_patient' %}">patient</a></p>
+</div>
+
+</div>
+
+<div class="edit_patient_header">
+    <div style="text-align:center;"><h2> Delete  Record</h2></div>
+</div>
+
+<div class="edit_patient" style="height:300px;">
+    <div class="side1_edit" style="height:300px;">
+        <h3>{{patient.first_name}} {{patient.last_name}}</h3>
+        <div id="profile_photo"><img src="{{patient.photo.url}}" height="110" width="105"></div>
+    </div>
+    <div  class="side2_edit" >
+        <form onsubmit='alert("you have successfully deleted {{patient}}")' method="POST" style="background:white;" class="edit_form">
+            {% csrf_token %}
+            <p> Are you sure you want to delete {{patient}}'s record ? </p>
+            <a href="{{request.META.HTTP_REFERER}}"></a>
+            <input type="button" value="Cancel" onclick="history.back()" style="cursor:pointer">
+            <input type="submit" value="Confirm">
+        </form>
+
+    </div>
+<div class="side3_edit" >
+
+    </div>
+</div>
+{% endblock %}
+

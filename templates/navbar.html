@@ -1,0 +1,45 @@
+<!-- <div>
+<form style="margin-top:300px;">
+    <p>Name</p>
+    <input type="name" name="username">
+     <p>Password</p>
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+
+</form>
+    </div>>]
+-->
+{% load static %}
+<div  class="navbar_" {% if not home %} style="top:80px;" {% endif %}>
+    <a href="/" ><img src="{% static 'images/home.png' %}" height="26px" width="26px" style="float:left; position:absolute margin-right:10px; margin-left:40px; "></a>
+    {% if user.is_authenticated %}
+        <div  onclick="dropProfile()" class="profile_container" style="z-index:1;">
+            <img src="{% static 'images/login.png' %}" height="26px" width="26px" style="float:left; ">
+            <div id="profile_menu">
+                <span><a href="{% url 'register' %}"> Logout</a></span>
+                <br><br>
+                <span><a href=""> Edit Profile</a></span>
+         </div>
+        </div>
+    {% else %}
+        {% if page != "login" %}
+            <span style="position:absolute;"><a href="{% url 'login' %}"> Login</a></span>
+        {% endif %}
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <span  style="position:absolute; left:150px; text-transform:capitalize;">Dr. {{user.username}} </span>
+        {% endif %}
+
+        <div id="menu-container" class="menu-container" onclick ="dropMenu()"
+             style="float:right; margin-top:10px; margin-right:50px;">
+           <img id="menu_image" src="{% static 'images/menu.png' %}" height="17.5px"
+                       width="17.5px" image1="{% static 'images/menu.png' %}" image2="{% static 'images/close.png' %}" style="float:right; margin:5px;">
+
+            <div id="menu" class="menu">
+            <p><a href="{% url 'about_us' %}"> About Us</a></p>
+            <p><a href="{% url 'contact_us' %}">Contact Us</a></p>
+            <p><a>Other things</a></p>
+            </div>
+        </div>
+</div>

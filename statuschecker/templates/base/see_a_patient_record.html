@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>See A Patient's Record</title>{% endblock %}
+
+{% block body %}
+<div class="search_patient">
+    <div class="side1_p">
+        <h3> Possible Matches </h3>
+        <form method="POST">
+            {% csrf_token %}
+            <p>Enter Patient Email Address or Id</p>
+            <br>
+            <input type="search" name="q" placeholder="Search Record...">
+        </form>
+    </div>
+
+    <div class="side2_p">
+        <h3> Patient's Details</h3>
+        {% if patients %}
+            <h4>{{patients.count}} Patient(s) Found </h4>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Select</th>
+                </tr>
+            {% for patient in patients %}
+            <tr>
+                    <td>{{patient.id}}</td>
+                    <td>{{patient.first_name}}</td>
+                    <td>{{patient.last_name}}</td>
+                    <td><a href="{% url 'current_patient' %}{{patient.id}}">select</a></td>
+            </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            {% for message in messages %}
+            <h4> {{message}}</h4>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+

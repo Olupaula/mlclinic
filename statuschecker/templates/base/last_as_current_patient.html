@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>Current Patient</title>{% endblock %}
+
+{% block body %}
+<div class="current_patient" >
+<h3>Patient's Details</h3>
+<h3> Choose a Test </h3>
+</div>
+<div class="current_patient" style="margin-top:-20px" >
+
+    <div class="side1_p">
+        <p>First Name: {{patient.first_name}}</p>
+        <p>Last Name: {{patient.last_name}}</p>
+        <p>Patient Id: {{patient.id}}</p>
+        <p>Phone Number: {{patient.phone_number}}</p>
+        <p>Email Address: {{patient.email_address}}</p>
+        <p>Age: {{patient.age}}</p>
+        <p><a href="">Edit Patient's Record</a></p>
+        <a href="">Delete Patient's Record</a></p>
+    </div>
+
+    <div class="side2_p">
+
+        <p></p><a>Breast Cancer Predictor</a></p>
+        <p><a>Diabetes Predictor</a></p>
+    </div>
+
+</div>
+{% endblock %}
+

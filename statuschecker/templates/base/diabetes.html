@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+<title>Diabetes Form</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="sectionBC">
+
+    <span class="links" style="text-align:right; float:right; margin-top:20px; margin-right:40px"> <a href="{% url 'diabetes_result' %}"  > Last Result &#8594 </a></span>
+
+   <div id="pre" style="clear:both;"> <h2>Predictor for Diabetes</h2>
+       <p style="color:darkblue">
+           This test is for unregistered patients.
+           To check for registered patient,
+           <span class="links" style="margin-left:-35px;"><a href="{% url 'see_a_patient' %}" >Click Here</a></span>
+       </p>
+        <h4 style="color:rgb(60,60,60)">Enter Patients Metrics For Prediction</h4>
+    </div>
+
+
+    <div class="form_container" >
+        <form class="form" method="POST" action="">
+            {% csrf_token %}
+                <div class='input_set1'>
+                    <p >Number of Pregnancies</p>
+                    <input required  type="number"  name="no_of_pregnancies" >
+                    <p>Glucose Level </p>
+                    <input required type="number" name="glucose_level" >
+                    <p>Blood Pressure </p>
+                    <input required type="number"  name="blood_pressure">
+                    <p>Skin Thickness</p>
+                    <input required type="number"  name="skin_thickness" >
+
+                </div>
+
+                <div class='input_set2'>
+                    <p>Insulin </p>
+                    <input required type="number"  name="insulin" >
+                    <p>BMI</p>
+                    <input required type="number" step=0.00000000000001 name="bmi">
+                    <p>diabetes Pedigree Function</p>
+                    <input required type="number" step=0.00000000000001 name="pedigree">
+                    <p>Age<p>
+                    <input required type="number" step=0.00000000000001 name="age">
+                </div >
+
+              <br>
+
+            <div class='submit' >
+                <input required  type="submit" value="Predict" >
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
+radius_mean,area_mean,concavity_mean,concave points_mean,area_se,radius_worst,perimeter_worst,area_worst,concavity_worst,concave points_worst

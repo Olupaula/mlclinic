@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Breast Cancer Test For Unregistered Patients</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="sectionBC">
+
+
+    <p class="links" style="text-align:right; float:right; margin-top:20px; margin-right:40px;"> <a href="{% url 'breast_cancer_result' %}"  > Last Result  &#8594 </a></p>
+
+   <div id="pre" style="clear:both;"> <h2>Predictor for Cancer of the Breast</h2>
+       <p style="color:darkblue">
+           This test is for unregistered patients.
+           To check for registered patient,
+           <span class="links" style="margin-left:-35px;"><a href="{% url 'see_a_patient' %}" >Click Here</a></span>
+       </p>
+        <h4 style="color:rgb(60,60,60)">Enter Patients Metrics For Prediction</h4>
+    </div>
+
+
+    <div class="form_container" >
+
+
+        <form class="form " method="POST" action="">
+            {% csrf_token %}
+                <div class='input_set1'>
+                    <p >Mean Radius</p>
+                    <input required  type="number" step=0.00000000000001 name="mean_radius" >
+                    <p>Mean Area </p>
+                    <input required type="number" step=0.00000000000001 name="mean_area" >
+                    <p>Mean Concavity </p>
+                    <input required type="number" step=0.00000000000001 name="mean_concavity">
+                    <p>Mean concave point </p>
+                    <input required type="number" step=0.00000000000001 name="mean_concave_point" >
+                    <p>Sensitivity Area </p>
+                    <input required type="number" step=0.00000000000001 name="sensitivity_area" >
+                </div>
+
+                <div class='input_set2'>
+                    <p>Worst Radius</p>
+                    <input required type="number" step=0.00000000000001 name="worst_radius">
+                    <p>Worst Perimeter</p>
+                    <input required type="number" step=0.00000000000001 name="worst_perimeter">
+                    <p>Worst Area</p>
+                    <input required type="number" step=0.00000000000001 name="worst_area">
+                    <p>Worst Concavity</p>
+                    <input required type="number" step=0.00000000000001 name="worst_concavity">
+                    <p>Worst Concave Points</p>
+                    <input required type="number" step=0.00000000000001 name="worst_concave_points">
+                </div >
+
+              <br>
+
+            <div class='submit extra' >
+                <input required  type="submit" value="Predict" >
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
+radius_mean,area_mean,concavity_mean,concave points_mean,area_se,radius_worst,perimeter_worst,area_worst,concavity_worst,concave points_worst

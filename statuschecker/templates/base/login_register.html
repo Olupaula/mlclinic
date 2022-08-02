@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% if not request.user.is_authenticated %}
+        {% if page == "login" %}
+
+            <title>Login</title>
+
+        {% else %}
+            <title>Register</title>
+
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+
+
+{% if request.user.is_authenticated %}
+<div class="logout_">
+    <div id="logout">
+        <p> Are you sure you want to logout </p>
+        <a href="{% url 'logout' %}"><span>yes</span>
+        </a > <a><span style="cursor:pointer" onclick="history.back()">No</span></a>
+    </div>
+</div>
+
+{% else %}
+    {% if page == "login" %}
+    <p class="links" style="text-align:left; margin-top:120px; padding-top:20px;">
+    </p>
+    <form class="login_form" method="POST">
+         {% csrf_token %}
+       <div>
+           <h3>Login Details</h3>
+            {% if messages %}
+             <div class="messages" >
+                    {% for message in messages %}
+                    <div>{{ message }}</div>
+                    {% endfor %}
+             </div>
+            {% endif %}
+            <p>User Name</p>
+            <input type="text" name="username" placeholder="Lastname eg. John ">
+            <p>Password</p>
+            <input type="password" name="password">
+            <p><input type="submit", value="login"></p>
+       </div>
+
+        <p>Not registered? <a href="{% url 'register' %}">sign up </a></p>
+    </form>
+
+    {% else %}
+        <form class="login_form" style=" margin-top:180px;" method="POST">
+            {% csrf_token %}
+            <div>
+                <h3>Registration</h3>
+                {% if messages %}
+                    <div class="messages" onload="alert({{message}})">
+                        {% for message in messages %}
+                            <div > {{  message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% for field in form %}
+                <p> {{field.label}}</p>
+                <p>{{field}}</p>
+                {% endfor %}
+
+               <input type="submit" value="Register">
+
+           </div>
+
+        <p>Are registered? <a href="{% url 'login' %}">Sign in</a></p>
+        </form>
+
+    {% endif %}
+{% endif %}
+
+{% endblock %}
+<script> alert('{{message}}')</script>
+<!--
+
+<p>Last Name</p>
+        <input type="text" placeholder="Lastname e.g Elder">
+        <p>Email</p>
+        <input type="email" placeholder="johnelderxcv@gmail.com">
+        <p>Age</p>
+        <input type="text" placeholder="Lastname eg. John Elder">
+        <p>Marital Status</p>
+        <input type="text" placeholder="Lastname eg. John Elder">
+        <p>Highest Education</p>
+        <input type="text" placeholder="Lastname eg. John Elder">
+        <p>Occupation</p>
+        <input type="text" placeholder="Lastname eg. John Elder">
+-->

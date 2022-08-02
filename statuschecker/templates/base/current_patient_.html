@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% include 'navbar.html' %}
+
+{% block head %} <title>Current Patient</title> {% endblock %}
+{% block body %}
+
+<div  style="margin-top:140px; text-align:center;" class="current_patient_heading">
+<h2>Patient's Details</h2>
+</div>
+
+<div class="current_patient" >
+    <div class="side_1">
+            <div class="profile_picture">
+                <div><img src="{{patient.photo.url}}" height="105" width="105"></div>
+            </div>
+            <div style="font-size:24px;">
+                  <p>{{patient.first_name}} {{patient.last_name}}</p>
+            </div>
+                <p>Patient Id: {{patient.id}}</p>
+                <p>Patient Gender: {{patient.gender}}</p>
+                <p>Phone Number: {{patient.phone_number}}</p>
+                <p>Email Address: {{patient.email_address}}</p>
+                <p>Age: {{patient.age}}</p>
+        <div class="all_choice_buttons" >
+                <span class="choice_button"><a href="{% url 'edit_patient_record' patient.id  %}">Edit Record</a></span>
+                <span class="choice_button"><a href="{% url 'delete_patient_record' patient.id  %}">Delete Record</a></span>
+        </div>
+    </div>
+
+    <div class="side_2">
+        <div>
+            <h3>Tests</h3>
+            {% if bc_record or d_record %}
+                {% if bc_record %}
+                    <p><a href="{% url 'bc_registered' patient.id %}">Breast Cancer Test </a></p>
+                {% endif %}
+                {% if d_record %}
+                <p><a href="{% url 'd_registered' patient.id %}">Diabetes Test </a ></p>
+                {% endif %}
+            {% else %}
+                    <p><i>No Test Record. <a href="{% url 'edit_patient_record' patient.id %}" >Enter </a> Patient's</i></p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="current_patient_bottom">
+    <div class="edit_patient_another" style="margin-top:-10px;">
+        <p>See a Different <a href="{% url 'see_a_patient' %}">Patient</a></p>
+    </div>
+</div>
+
+{% endblock %}
+

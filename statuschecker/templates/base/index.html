@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+
+
+<div class="introduction">
+    <h3>This health checker is a
+    digital clinic that predicts whether a
+    patient is diabetic or has breast cancer</h3>
+</div>
+
+<div id="home_link_1" class="links">
+
+    {% if not request.user.is_authenticated %}
+        <a href="{% url 'login' %}" >
+            <div id="button">
+                <p><b>Login</b></p>
+            </div>
+        </a>
+    {% endif %}
+
+    <div id="predictor_link">
+        <span><a href="/diabetes"> Diabetes Predictor</a></span>
+        <span> <a href="/breast_cancer">Breast Cancer Predictor</a></span>
+    </div>
+</div>
+{% if not request.user.is_authenticated %}
+<div class="section" style="height:900px;" >
+    <div class="exposition side1">
+        <h3>Learn More about </h3>
+        <p><a href="https://wwww.healthline.com/health/diabetes">Diabetes</a></p>
+        <p><a href="https://wwww.medicalnewstoday.com/articles/37136">Breast Cancer</a></p>
+    </div>
+
+    <div  class="exposition side2">
+         <h3>Diabetes and Breast Cancer</h3>
+        <div class="sub">
+            <img src="{% static 'images/doctor_typing.jpg' %}"
+             height="300px" width="500px" >
+        </div>
+
+        <div>
+            <p> Diabetes is a diseases that is caused by low insulin level and is a
+            common disease these days. Cancer on the other hand is a disease that affects the cells of an organism,
+            where abnormal cells grow uncontrollably beyond their usual boundaries. Breast Cancer is specific type of
+            cancer that affects breasts.
+            </p>
+        </div>
+    </div>
+
+</div>
+{% else %}
+<div class="section">
+    <div class="exposition side1">
+        <h3> Tasks</h3>
+        <p><a href="{% url 'patient_registration' %}">Register Patient</a></p>
+        <p><a href="{% url 'see_a_patient' %}">See a Patient's Status</a></p>
+         <h3> Rolls</h3>
+        <p style="text-align:center"><a href="{% url 'list_all_patients' %}">See all Patients' Records</a></p>
+    </div>
+
+    <div class="exposition side2">
+        <div class="sub">
+        <img style="text-align:center;" src="{% static 'images/stethoscope1.jpg' %}"
+             height="400px" width="750px">
+
+        </div>
+            <h3>Learn More about </h3>
+            <p style="text-align:center"><a href="https://www.healthline.com/health/diabetes">Diabetes</a></p>
+            <p style="text-align:center"><a href="https://www.medicalnewstoday.com/articles/37136">Breast Cancer</a></p>
+
+
+
+    </div>
+</div>
+{% endif %}
+
+
+<div class="footer">
+<p> Powered by Opaul Studios</p>
+</div>
+{% endblock %}

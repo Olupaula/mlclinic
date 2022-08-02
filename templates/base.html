@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ {% load static %}
+
+<head>
+{% block head %} {% endblock %}
+    <link type="text/css" rel="stylesheet"   href="{% static 'styles/breast_cancer.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+{% if home %}
+<div class="header">
+    <h1>Health Checker</h1>
+    <p>Health is wealth</p>
+
+
+</div>
+
+{% else %}
+<div class="headerBC">
+     <div style="height:60px;">
+         <img src="{% static 'images/cross.jpg' %}" height="50" width="50">
+     </div>
+</div>
+{% endif %}
+
+{% include 'navbar.html' %}
+
+{% block body %}
+{% endblock %}
+
+<script src="{% static 'javascript/health.js' %}"></script>
+</body>
+</html>
+
+

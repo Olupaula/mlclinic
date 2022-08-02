@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %} <title>List of All Patients</title>{% endblock %}
+
+{% block body %}
+<div class="list_all_patients">
+   <p class="nav_all"><a href="/">  &#8592 Back </a></p>
+   <h3>List of All Registered Patients</h3>
+   <table>
+      <tr>
+         <td>ID</td>
+         <td>First Name</td>
+         <td>Last Name</td>
+         <td>Phone Number</td>
+         <td>Email Address</td>
+         <td>Age </td>
+         <td>Photo</td>
+      </tr>
+
+      {% for patient in patients %}
+         <tr>
+            <td> {{patient.id}}</td>
+            <td>{{patient.first_name}}</td>
+            <td>{{patient.last_name}}</td>
+            <td>{{patient.phone_number}}</td>
+            <td>{{patient.email_address}}</td>
+            <td>{{patient.age}}</td>
+            <td><img src="{{patient.photo.url}}" height="38" width="38"></td>
+         </tr>
+       {% endfor %}
+   </table>
+
+</div>
+{% endblock %}

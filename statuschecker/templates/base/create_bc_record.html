@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+{% block head %} <title>Create Breast Cancer Metrics</title>{% endblock %}
+
+{% block body %}
+<div class="edit_patient_another">
+    <p>see a different <a href="{% url 'see_a_patient' %}">patient</a></p>
+</div>
+
+<div class="edit_patient_header" >
+    <h2> Enter Breast Cancer Metrics </h2>
+</div>
+<div class="edit_patient" >
+    <div class="side1_edit">
+        <h3>Patient's Details</h3>
+        <div id="profile_photo"><img src="{{patient.photo.url}}" height="110" width="105"></div>
+        <p>First Name: {{patient.first_name}}</p>
+        <p>Last Name: {{patient.last_name}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Patient Id: {{patient.id}}</p>
+        <p>Phone Number: {{patient.phone_number}}</p>
+        <p>Email Address: {{patient.email_address}}</p>
+        <p>Age: {{patient.age}}</p>
+
+        <div class="all_choice_buttons" >
+            <span class="choice_button"><a href="{% url 'edit_patient_record' patient.id %}">Edit Record</a></span>
+            <span class="choice_button"><a href="{% url 'delete_patient_record' patient.id %}">Delete Record</a></span>
+        </div>
+    </div>
+    <div  class="side2_edit">
+        <form method="POST" style="background:white;" class="edit_form">
+            {% csrf_token %}
+
+            {% for field in form %}
+                <p>{{field.label}}</p>
+                <p>{{field}}</p>
+
+            {% endfor %}
+            <input type="submit" value="save">
+        </form>
+    </div>
+    <div class="side3_edit">
+              <h3>Edit</h3>
+        {% if d_record %}
+        <p><a href="{% url 'edit_diabetes' patient.id %}">Edit Diabetics Metrics</a></p>
+        {% else %}
+        <p>No Diabetic Cancer Metrics. <a href="{% url 'create_d_record' patient.id %}"> Enter Record at Edit Patient's Record</a></p>
+        {% endif %}
+
+        <p><a href="{% url 'edit_patient_record' patient.id %}">Edit Patient Record </a></p>
+
+        {% comment %} <p><a href="{% url 'bc_registered' patient.id %}">Breast Cancer Predictor</a></p> {% endcomment %}
+        {% comment %}<p><a href="{% url 'd_registered' patient.id %}">Diabetics Predictor</a ></p> {% endcomment %}
+    </div>
+</div>
+{% endblock %}
+

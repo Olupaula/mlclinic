@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %} <title>Patient Registration</title>{% endblock %}
+
+{% block body %}
+<div  onsubmit="alert('Form submitted')" class="login_form" style="text-align:center; margin-top:170px; ">
+   <form method="POST"  enctype="multipart/form-data">
+      {% csrf_token %}
+      <h3> Patient Registration </h3>
+      {% if messages %}
+         {% for message in messages %}
+         <ul class="messages"> {{message}}</ul>
+         {% endfor %}
+      {% endif %}
+
+      {% for field in form %}
+      <p>{{field.label}}</p>
+      <p>{{field}}</p>
+      {% endfor %}
+       <p> <input type="submit" > </p>
+   </form>
+</div>
+
+<div>
+
+
+</div>
+
+{% endblock %}

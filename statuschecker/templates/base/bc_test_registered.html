@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %}
+<title>Breast Cancer Test Result </title>{% endblock %}
+{% block body %}
+<div class="result_container" >
+<div class="side0_result">
+    {% if d_record %}
+        <span><a href="{% url 'd_registered' patient.id %}">Diabetes Predictor</a ></span>
+    {% else %}
+        <span style="color:transparent">No Diabetes Result</span>
+    {% endif %}
+    <span style="float:right"><a href="{% url 'current_patient_' patient.id %}">Patient Profile</a ></span>
+
+</div>
+
+<div class="side1_result" >
+    <div class="patient_result_header">
+        <h3>Breast Cancer Test Result</h3>
+    </div>
+
+        <table>
+             <tr>
+                <td><b>Full Name </b></td>
+                <td>{{patient.first_name}} {{patient.last_name}}</td>
+            </tr>
+
+            <tr>
+                <td><b>Patient Id </b></td>
+                <td>{{patient.id}}</td>
+            </tr>
+            <tr>
+                <td><b>Gender </b></td>
+                <td>{{patient.gender}}</td>
+            </tr>
+            <tr>
+                <td><b>Phone Number</b></td>
+                <td>{{patient.phone_number}}</td>
+            </tr>
+            <tr>
+                <td><b>Email Address</b></td>
+                <td> {{patient.email_address}}</td>
+            </tr>
+                <td><b>Age</b></td>
+                <td>{{patient.age}}</td>
+            </tr>
+        <tr>
+            <td><b>Mean Radius</b></td>
+            <td>{{bc_record.mean_radius}}</td>
+
+        </tr>
+        <tr>
+            <td><b>Mean Area</b></td>
+            <td>{{bc_record.mean_area}}</td>
+        </tr>
+        <tr>
+            <td><b>Mean Concavity</b></td>
+            <td>{{bc_record.mean_concavity}}</td>
+        </tr>
+        <tr>
+            <td><b>Mean Concavity</b></td>
+            <td>{{bc_record.mean_concavity}}</td>
+        </tr>
+        <tr>
+            <td><b>Mean Sensitivity Area</b></td>
+            <td>{{bc_record.sensitivity_area}}</td>
+        </tr>
+        <tr>
+            <td><b>Worst Radius</b></td>
+            <td>{{bc_record.worst_radius}}</td>
+        </tr>
+        <tr>
+            <td><b>Worst Perimeter</b></td>
+            <td>{{bc_record.worst_perimeter}}</td>
+        </tr>
+        <tr>
+            <td><b>Worst Area</b></td>
+            <td>{{bc_record.worst_area}}</td>
+        </tr>
+        <tr>
+            <td><b>Worst Concavity</b></td>
+            <td>{{bc_record.worst_concavity}}</td>
+        </tr>
+        <tr>
+            <td><b>Worst Concave Points</b></td>
+            <td>{{bc_record.worst_concave_points}}</td>
+        </tr>
+
+            <tr>
+                <td><b>Conclusion</b></td>
+                <td>{{bc_result.predicted_target}}</b></td>
+            </tr>
+
+            <tr>
+                <td><b>Accuracy</b></td>
+                <td>{{bc_result.accuracy}}</td>
+            </tr>
+            <tr>
+                <td><b>Recall</b></td>
+                <td>{{bc_result.recall}}</td>
+            </tr>
+            <tr>
+                <td><b>Precision</b></td>
+                <td>{{bc_result.precision}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

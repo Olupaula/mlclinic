@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+{% block head %} <title>Breast Cancer Test Result</title>{% endblock %}
+
+<div>
+    <p class="links" style="text-align:left; margin-top:120px; padding-top:20px;">
+        <a href="{% url 'breast_cancer' %}"  >&#8592  Breast Cancer Predictor</a>
+    </p>
+</div>
+
+{% if b.accuracy == None %}
+<div class="result">
+    <h3>Test Result</h3>
+    <p style="text-align:center;">No result yet. Go back and enter the appropriate metrics. </p>
+</div>
+{% else %}
+
+<div class="result">
+    <h3>Test Result</h3>
+    <p>The analysis suggests that Patient has a {{b.predicted_target}}
+    growth on her breast. </p>
+    <p>Accuracy: {{b.accuracy}}</p>
+    <p>Recall: {{b.recall}}</p>
+    <p>Precision: {{b.precision}}</p>
+{% endif %}
+</div>
+{% endblock %}
+
+{% comment %}<div class="headerBC">{% endcomment %}
+{% comment %}    <img src="{% static 'images/cross.jpg' %}" height="50" width="50"><img>{% endcomment %}
+{% comment %}</div> {% endcomment %}

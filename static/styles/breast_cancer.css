@@ -1,0 +1,1326 @@
+
+body {
+    margin:0;
+    padding:0;
+    width:100%;
+    font-family:Trebuchet MS, sans-serif;
+}
+.headerBC {
+    text-align:center;
+    color:brown;
+    border:1px solid red;
+    padding:10px;
+    width:100%;
+    font-family: Helvatica, Arial, sans-serif;
+    position:fixed;
+    top:0;
+    background:rgb(203,243,243);
+
+}
+
+.headerBC span {
+    color:purple;
+    font-family: Brush script MT, cursive;
+    font-size: 29px;
+}
+
+.sectionBC {
+    clear:right;
+    margin-top:125px;
+    margin-left:24px;
+    margin-right:24px;
+
+}
+
+.sectionBC #pre {
+
+    text-align:center;
+}
+
+.sectionBC a {
+    color:green;
+    text-decoration:none;
+}
+
+
+
+form_div {
+    text-align:center;
+
+}
+
+.form {
+    color:rgb(80,80,80);
+    font-family: Helvatica, Verdana, sans-serif;
+    font-size:14px;
+    text-align:center;
+
+    /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
+}
+
+
+.form input[type=number]{
+    width:100%;
+    height:25px;
+    border:1px solid lightblue;
+    text-align:center;
+    color:rgb(80,80,80);
+    font-size:14px;
+    display:block;
+    margin-top:20px;
+}
+
+
+.form .submit {
+    text-align:center;
+    margin-top:10px;
+    clear:both;
+    text-align:center;
+
+    /*background:yellow;*/
+}
+
+.form .submit input[type=submit]{
+    background:red;
+    color:white;
+    border:0;
+    padding:12px 5px 12px 5px;
+    width:105px;
+    font-weight:bold;
+    font-size:13px;
+    border-radius: 6px 6px 6px 6px;
+
+}
+
+
+.form_container {
+    width:40vw;
+    margin:auto;
+    height:500px;
+    /*background:blue;*/
+}
+
+form select{
+      background:transparent;
+      font-size:14px;
+    }
+
+@media screen and (max-width:640px){
+   .form_container {
+    height:800px;
+
+    /*background:blue;*/
+    }
+    .form_container {
+        width:75%;
+        margin:auto;
+        /*background:blue;*/
+    }
+    .form .input_set1 {
+        text-align:center;
+    }
+
+
+    .form .input_set2 {
+        margin-bottom:-13px;
+    }
+
+    .form input[type=number]{
+        width:100%;
+        height:25px;
+        border:1px solid lightblue;
+        text-align:center;
+        color:rgb(80,80,80);
+        font-size:14px;
+        display:block;
+        margin-top:20px;
+        margin:auto;
+    }
+
+       .login_form {
+        /*background:rgb(200, 200,180);*/
+        border: 1px solid darkgreen;
+        width:90%;
+        margin:auto;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+        margin-bottom:50px;
+    }
+
+
+    .login_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .login_form input{
+        width:85%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .login_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:20vw;
+        border:0;
+
+
+    }
+
+
+    .logout_ {
+        background:rgb(100, 100, 100);
+        text-align:center;
+
+        margin-top:120px;
+        height:1500px;
+        padding-top:50px;
+    }
+
+    .logout_ #logout {
+        border:1px solid green;
+        padding:40px;
+        text-align:center;
+        background:rgb(250, 250, 250);
+        width:250px;
+        margin:auto;
+        margin-top:50px;
+        box-shadow:10px 10px;
+        animation-name:fader;
+        animation-duration:1s;
+
+    }
+
+}
+
+
+ @media screen and (min-width:641px) and (max-width:1007px){
+    .form_container {
+        width:400px;
+        margin:auto;
+        /*background:blue;*/
+    }
+
+    .form .input_set1 {
+        text-align:center;
+        float:left;
+    }
+
+    .form .input_set2 {
+        margin-bottom:35px;
+        float:right;
+    }
+
+    .form input[type=number]{
+        width:20px;
+        height:25px;
+        border:1px solid lightblue;
+        text-align:center;
+        color:rgb(80,80,80);
+        font-size:14px;
+        display:block;
+        margin-top:20px;
+    }
+
+   form .submit {
+        text-align:center;
+        margin-top:10px;
+        clear:both;
+
+    /*background:yellow;*/
+    }
+
+    .form .submit input[type=submit]{
+        color:white;
+        border:0;
+        padding:12px 5px 12px 5px;
+        width:105px;
+        font-weight:bold;
+        font-size:13px;
+        border-radius: 6px 6px 6px 6px;
+        position:absolute;
+        bottom:9%;
+        margin:auto;
+        margin-left:-55px;
+
+    }
+
+    .form .extra input[type=submit]{
+        bottom:-4%;
+    }
+
+    .form input[type=number]{
+        width:100%;
+        height:25px;
+        border:1px solid lightblue;
+        text-align:center;
+        color:rgb(80,80,80);
+        font-size:14px;
+        display:block;
+        margin-top:20px;
+        margin:auto;
+    }
+
+       .login_form {
+        /*background:rgb(200, 200,180);*/
+        border: 1px solid darkgreen;
+        width:55%;
+        margin:auto;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+    }
+
+
+    .login_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .login_form input{
+        width:85%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .login_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:75px;
+        border:0;
+
+    }
+
+
+    .logout_ {
+        background:rgb(100, 100, 100);
+        text-align:center;
+
+        margin-top:120px;
+        height:1500px;
+        padding-top:50px;
+    }
+
+    .logout_ #logout {
+        border:1px solid green;
+        padding:40px;
+        text-align:center;
+        background:rgb(250, 250, 250);
+        width:250px;
+        margin:auto;
+        margin-top:50px;
+        box-shadow:10px 10px;
+        animation-name:fader;
+        animation-duration:1s;
+
+    }
+}
+
+
+@media screen and (min-width:1008px){
+    .form_container {
+        width:50%;
+        margin:auto;
+        /*background:blue;*/
+    }
+    .form .input_set1 {
+        float:left;
+        text-align:center;
+    }
+
+    .form .input_set2 {
+        float:right;
+        margin-bottom:1px;
+    }
+
+    .form input[type=number]{
+        width:22vw;
+        height:25px;
+        border:1px solid lightblue;
+        text-align:center;
+        color:rgb(80,80,80);
+        font-size:14px;
+        display:block;
+        margin-top:20px;
+    }
+
+
+       .login_form {
+        /*background:rgb(200, 200,180);*/
+        border: 1px solid darkgreen;
+        width:45%;
+        margin:auto;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+    }
+
+
+    .login_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .login_form input{
+        width:85%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .login_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:7vw;
+        border:0;
+
+    }
+
+    .logout_ {
+        background:rgb(100, 100, 100);
+        text-align:center;
+
+        margin-top:120px;
+        height:1500px;
+        padding-top:50px;
+    }
+
+    .logout_ #logout {
+        border:1px solid green;
+        padding:40px;
+        text-align:center;
+        background:rgb(250, 250, 250);
+        width:250px;
+        margin:auto;
+        margin-top:50px;
+        box-shadow:10px 10px;
+        animation-name:fader;
+        animation-duration:1s;
+
+    }
+
+    .form .extra input[type=submit]{
+        margin-top:25px;
+    }
+
+}
+
+
+.title {
+    margin-top:100px;
+    text-align:center;
+}
+
+
+
+.result {
+    text-align:justify;
+    background: rgb(245,245,245);
+    width:50vw;
+    font-family: Tahoma;
+    margin:auto;
+    margin-top:20px;
+    padding:40px;
+}
+
+.result h3{
+    text-align:center;
+}
+
+.result p {
+    color:rgb(95,95,95);
+}
+
+.error_message {
+    color:rgb(150, 80, 80);
+    border: 1px solid red;
+    padding:10px 20px 10px 20px;
+    text-align:center;
+    font-family: 'times new roman'
+}
+
+.login {
+
+    margin-right:50px;
+    margin-left:40px;
+    margin-top:150px;
+    height:10px;
+}
+
+.navbar_ {
+    padding:0;
+    background:rgb(245,245,245);
+    border-top: 1px solid pink;
+    position:fixed;
+    width:100%;
+    top:111px;
+    z-index:10;
+}
+
+.navbar_ img {
+    margin:10px;
+}
+
+.navbar_ span{
+    vertical-align:middle;
+    position:relative;
+    padding-top:20px;
+    color:darkblue;
+}
+
+.navbar_header_home {
+    margin-left:-15px;
+    padding:0;
+    padding-top:10px;
+    background:white;
+    border: 1px solid pink;
+    position:fixed;
+    width:100%;
+    margin-top:-200px;
+    height:40px;
+}
+
+
+
+@keyframes fader{
+0% {
+    opacity:0;
+    box-shadow:2px 1px;
+    margin-top:0;
+    }
+
+100% {
+    display:block;
+    opacity:1.0;
+    box-shadow:10px 10px;
+    margin-top:50px;
+    }
+}
+
+.logout_ #logout span {
+    background:darkred;
+    color:white;
+    width:59px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:10px;
+}
+
+.logout_ #logout span:hover {
+    background:red;
+}
+
+
+.logout_ #logout a{
+    text-decoration:none;
+}
+
+
+
+
+@media screen and (max-width:1007px){
+    .search_patient {
+        display:block;
+        margin-auto;
+        width:100%;
+        margin-top:130px;
+        /*text-align:center;*/
+    }
+
+    .search_patient .side1_p {
+        background:rgb(240,240,230);
+        margin:auto;
+        height:220px;
+        overflow-x:scroll;
+    }
+
+    .search_patient .side1_p input{
+        display:block;
+        margin:auto;
+    }
+
+    .search_patient .side2_p {
+        background:rgb(220,220,220);
+        margin:auto;
+        margin-top:-30px;
+        height:400px;
+        /*text-align:center;*/
+        /*margin:auto;*/
+
+    }
+
+    .search_patient h3 {
+        color:white;
+        background:rgb(200,100,10);
+        padding:15px;
+        text-align:center;
+    }
+
+
+    .side1_p p{
+        color:rgb(100, 100, 100);
+        margin:auto;
+        text-align:center;
+        margin-top:30px;
+    }
+
+    .side2_p h4{
+     text-align:center;
+    }
+
+    table {
+    background:white;
+    margin:auto;
+    }
+
+}
+
+@media screen and (min-width:1008px){
+   .search_patient {
+        display:grid;
+        grid-template-columns: 2fr 3fr;
+        margin-top:200px;
+        height:auto;
+        padding-bottom:30px;
+        /*text-align:center;*/
+    }
+
+    .search_patient .side1_p {
+        background:rgb(240,240,230);
+    }
+
+    .search_patient .side1_p  input{
+        display:block;
+        margin:auto;
+        margin-top:-10px;
+        margin-bottom:100px;
+    }
+
+    .search_patient .side2_p {
+        background:rgb(220,220,220);
+        /*text-align:center;*/
+        /*margin:auto;*/
+    }
+
+    .search_patient h3 {
+        color:white;
+        background:rgb(200,100,10);
+        padding:15px;
+        margin:auto;
+        margin-top:-1px;
+        text-align:center;
+
+    }
+
+    .side1_p p {
+        color:rgb(100, 100, 100);
+        margin-top:30px;
+        text-align:center;
+    }
+
+   .side2_p h4{
+       text-align:center;
+
+    }
+
+    table {
+    background:white;
+    margin:auto;
+    margin-bottom:80px;
+    }
+}
+
+
+table, td, th {
+    border:1px solid black;
+    border-collapse:collapse;
+    background:white;
+}
+
+td, th {
+    padding:10px;
+}
+
+table {
+    background:white;
+}
+
+.profile_container {
+    position:absolute;
+    left:80px;
+
+}
+
+.profile_container #profile_menu {
+    position:relative;
+    display:none;
+    background:rgb(120,120,140);
+    top:25px;
+    left:10px;
+    padding-right:10px;
+    padding-left:10px;
+    padding-top:4px;
+    /*padding-top:15px;*/
+    padding-bottom:10px;
+    border-radius:25px 0 0 0;
+    font-family: Arial ;
+    height:50px;
+    width:150px;
+    box-shadow:rgb(80,80,100) 2px 2px 1px 1px;
+
+}
+
+.profile_container #profile_menu a{
+
+     text-decoration: none;
+     color:white;
+     text-align:justify;
+     padding-bottom:15px;
+
+
+}
+/*.profile_container:hover #profile_menu {
+    display:block;
+
+}*/
+
+/*.profile_container #profile_menu #logout_button {
+    position:relative;
+    }
+
+.profile_container #profile_menu #logout_button #logout_form_display {
+
+    display:none;
+    position:relative;
+    top:300px;
+    left:200px;
+    background:green;
+    color:white;
+    width:500px;
+    height:400px;
+}
+
+
+.profile_container #profile_menu #logout_button:hover #logout_form_display {
+    display:block;
+}*/
+
+.profile_picture {
+    text-align:center;
+    left:250px;
+    margin-top:25px;
+    border:5px solid white;
+    height:105px;
+    width:105px;
+    margin:auto;
+    border-radius:50%;
+}
+
+.profile_picture img{
+    border-radius:50%;
+}
+
+.current_patient {
+    margin:20px;
+    display:block;
+    display:grid;
+    grid-template-columns : 3fr 1fr;
+    border:1px solid grey;
+    height:500px;
+}
+
+.current_patient_heading h2 {
+    text-align: center;
+    padding-top:15px;
+}
+
+.current_patient_bottom {
+    background:rgb(240,240,240);
+    padding:15px;
+    margin:20px;
+    margin-top:-20px;
+    border-right:1px solid green;
+    border-left: 1px solid green;
+    border-bottom: 1px solid green;
+
+}
+
+
+.current_patient .side_1 .choice_button a{
+
+    background:red;
+    color:white;
+    margin-right:10px;
+    margin-left:20px
+ }
+
+ .current_patient .side_1 .choice_button a:hover {
+   box-shadow: 1px 2px 4px white;
+ }
+
+
+ .current_patient .side_1 .all_choice_buttons{
+   margin-right:10px;
+ }
+
+ .current_patient .side_1 .all_choice_buttons{
+    padding-top:15px;
+ }
+
+/* choice_button is used all through edit and result html pages */
+  .choice_button  a{
+    background: brown;
+    padding:10px;
+    color:white;
+    width: 110px;
+    border-radius:80px 80px 80px 80px;
+    box-shadow: 1px 2px 4px darkred;
+    text-decoration:none;
+ }
+
+/*.current_patient .side_0 a {
+    color:darkblue;
+    text-decoration:none;
+}
+
+.current_patient .side_0 a:hover {
+    color:white;
+    text-decoration:none;
+}
+*/
+.current_patient .side_1{
+    padding-top:30px;
+    text-align:left;
+    font-size:14px;
+    text-align:center;
+    background:rgb(120,120,120);
+    color:lightyellow;
+
+}
+
+.current_patient .side_2{
+   background:lightyellow;
+   color:brown;
+   padding-right:50px;
+   padding-left:50px;
+}
+
+.current_patient .side_2 span {
+
+}
+
+.current_patient .side_2 h3 {
+    color:black;
+    text-align:center;
+}
+
+.current_patient_edit {
+    padding-left:20px;
+}
+
+.current_patient_edit a, .side_1 a, .side_2 a  {
+    text-decoration:none;
+    color:darkgreen;
+}
+
+.current_patient_bottom {
+
+
+}
+
+.current_patient_edit a:hover, .side_1 a:hover, .side_2 a:hover  {
+    text-decoration:none;
+    color:blue;
+}
+
+
+@media screen and (max-width:640px){
+    .current_patient {
+        margin-right:20px;
+        margin-left:20px;
+        display:block;
+        border:1px solid grey;
+        height:600px;
+    }
+    .current_patient .side_1{
+        padding-top:30px;
+        text-align:left;
+        font-size:14px;
+        text-align:center;
+        background:rgb(120,120,120);
+        color:lightyellow;
+        height:440px;
+    }
+
+    .current_patient .side_2{
+       background:lightyellow;
+       color:brown;
+       padding-right:50px;
+       padding-left:50px;
+       height:200px;
+       margin-top:-20px;
+       padding-top:10px;
+       text-align:center;
+    }
+
+    .current_patient .current_patient_bottom .edit_patient_another{
+        text-align:center;
+    }
+
+}
+
+
+@media screen and (min-width:641px) and (max-width:1007px){
+    .current_patient {
+        margin-right:20px;
+        margin-left:20px;
+        display:grid;
+        grid-template-columns:2.2fr 1.5fr;
+        border:1px solid grey;
+
+
+    }
+    .current_patient .side_1{
+        padding-top:30px;
+        text-align:left;
+        font-size:14px;
+        text-align:center;
+        background:rgb(120,120,120);
+        color:lightyellow;
+    }
+
+    .current_patient .side_2{
+       background:lightyellow;
+       color:brown;
+       padding-right:50px;
+    }
+
+    .current_patient .current_patient_bottom .edit_patient_another{
+
+    }
+
+}
+
+/* pages with edit use this styling, namely: edit_patient, edit_breast_cancer and edit_diabetics and delete_record.
+ */
+.edit_patient_another {
+    margin-top:150px;
+    color:darkred;
+    padding-left:24px;
+}
+
+.edit_patient_another a {
+    text-decoration:none;
+    color:green;
+}
+
+.edit_patient_another a:hover {
+   color:blue;
+}
+.edit_patient_header {
+     text-align: center;
+     margin-auto;
+
+     margin-top:10px;
+
+}
+
+/* Rather than using @media screen the styling set 1306px and above as the default. This was left like this because of websites that do not support the grid displays.*/
+.edit_patient  {
+    display:grid;
+    grid-template-columns:1.3fr 3fr 1.5fr;
+    border:1px solid darkblue;
+    z-index:-1;
+    margin-bottom:8px;
+}
+
+.edit_patient #profile_photo {
+    border: 5px solid rgb(240,240,240);
+    height:110px;
+    width:105px;
+}
+
+.edit_patient h3 {
+    color: white;
+    margin-top:40px;
+}
+
+.edit_patient .side1_edit .choice_button a {
+    background: brown;
+    padding:12px;
+    color:white;
+    width: 110px;
+    border-radius:80px 80px 80px 80px;
+    box-shadow: 1px 2px 4px darkred;
+    text-decoration:none;
+}
+
+.edit_patient .side1_edit .choice_button a:hover {
+    box-shadow: 1px 2px 4px white;
+}
+
+.edit_patient .side1_edit .choice_button  {
+    padding-right:10px;
+}
+
+.edit_patient .side1_edit a, .side3_edit a {
+    color:lightgreen;
+    text-decoration:none;
+}
+
+
+
+.edit_patient .side1_edit {
+    padding-left:20px;
+    background:rgb(110,110,110);
+    color:lightyellow;
+}
+
+
+.edit_patient .side2_edit {
+    padding-top:30px;
+    background:rgb(247,247,247);
+    text-align:center;
+}
+
+.edit_patient .side2_edit h3{
+    color:black;
+    }
+
+.edit_patient .side2_edit input[type=button]  {
+    background:red;
+    color:white;
+    width:100px;
+    height:40px;
+    border:none;
+}
+
+.edit_patient .side2_edit input[type=submit] {
+    background:red;
+    color:white;
+    width:100px;
+    height:40px;
+    border:none;
+}
+
+/*.edit_patient .side2_edit input {
+    margin-bottom:10px;
+} */
+
+
+
+.edit_patient .side3_edit {
+    padding-left:20px;
+    background:rgb(110,110,110);
+    color:lightyellow;
+
+}
+
+.edit_patient .side3_edit a:hover {
+    color:lightblue;
+    text-decoration:none;
+}
+
+
+.edit_patient .all_choice_buttons {
+    margin-top:30px;
+
+}
+
+
+@media screen and (max-width:1305px){
+      .edit_patient  {
+        display:block;
+        height:800px;
+        z-index:-1;
+       }
+
+    .edit_patient .side1_edit {
+        padding-left:20px;
+        padding-top:2px;
+        padding-bottom:30px;
+        background:rgb(110,110,110);
+        color:lightyellow;
+        line-height:0.8;
+        text-align:center;
+    }
+
+    .edit_patient .side1_edit #profile_photo{
+        margin:auto;
+
+    }
+
+    .edit_patient .side2_edit {
+        background:rgb(247,247,247);
+        text-align:center;
+    }
+
+
+    .edit_patient .side2_edit input[type=button]  {
+        background:red;
+        color:white;
+        width:100px;
+        height:40px;
+        border:none;
+        font-size:14px;
+    }
+
+    .edit_patient .side2_edit input[type=submit] {
+        background:red;
+        color:white;
+        width:100px;
+        height:40px;
+        border:none;
+
+    }
+
+    .edit_patient .side2_edit input {
+        margin-bottom:10px;
+        font-size:13px;
+        color: rgb(130,130,130);
+    }
+
+    .edit_patient .side3_edit {
+        text-align:center;
+        padding-left:20px;
+        margin-top:10px;
+        background:rgb(110,110,110);
+        color:lightyellow;
+        margin-left:-2px;
+        margin-right:-2px;
+        height:300px;
+
+    }
+
+    .edit_patient .side3_edit a:hover {
+        color:lightblue;
+        text-decoration:none;
+    }
+
+    .edit_patient .side3_edit h3 {
+        padding-top:60px;
+    }
+
+    .edit_patient .all_choice_buttons {
+        margin-top:40px;
+
+    }
+
+    .edit_form {
+        border: 1px solid darkgreen;
+        width:87%;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+        margin:auto;
+    }
+
+
+    .edit_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .edit_form input{
+        width:65%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .edit_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:7vw;
+        border:0;
+    }
+
+}
+
+@media screen and (min-width:641px) and (max-width:1007px){
+ .edit_form {
+        border: 1px solid darkgreen;
+        width:70%;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+        margin:auto;
+    }
+
+
+    .edit_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .edit_form input{
+        width:55%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .edit_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:7vw;
+        border:0;
+    }
+
+}
+
+
+@media screen and (min-width:1008px) and (max-width:1305px){
+ .edit_form {
+
+        border: 1px solid darkgreen;
+        width:55%;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+        margin:auto;
+    }
+
+
+    .edit_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .edit_form input{
+        width:65%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .edit_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:7vw;
+        border:0;
+    }
+
+}
+
+@media screen and (min-width:1306px) {
+  .edit_form {
+        border: 1px solid darkgreen;
+        width:87%;
+        margin-top:5px;
+        text-align:center;
+        font-family:arial;
+        margin:auto;
+        margin-bottom: 30px;
+    }
+
+
+    .edit_form p{
+        color:rgb(90, 90, 90)
+    }
+
+    .edit_form input{
+        width:65%;
+        height:20px;
+        border:1px solid lightblue;
+    }
+
+    .edit_form input[type=submit] {
+        background:red;
+        height:40px;
+        font-size:14px;
+        color:white;
+        width:7vw;
+        border:0;
+        margin-bottom:20px;
+
+    }
+
+}
+
+*/
+.result_container {
+    background:rgb(210,210,210);
+    padding-top:30px;
+    height:900px;
+
+}
+
+.patient_result_header {
+    text-align:center;
+
+}
+
+.side0_result {
+    margin-right:50px;
+    margin-left:50px;
+    margin-top:150px;
+}
+
+.side0_result a {
+    color:darkgreen;
+    text-decoration:none;
+  }
+
+.side0_result a:hover {
+    color:blue;
+}
+
+
+.side1_result table {
+    margin:auto;
+    margin-bottom:50px;
+}
+
+.side1_result tr td {
+    margin:auto;
+    font-size:14px;
+
+
+}
+
+.side1_result h3{
+    text-align:center;
+}
+
+.list_all_patients {
+    padding-top:140px;
+    padding-left:30px;
+    text-align:center;
+    background:rgb(200,200,200);
+    height:900px;
+}
+
+.list_all_patients table{
+    margin:auto;
+}
+
+.list_all_patients .nav_all{
+    text-align:left;
+}
+
+.list_all_patients .nav_all a{
+    text-align:left;
+    color:green;
+    text-decoration:none;
+}
+
+.list_all_patients .nav_all a:hover {
+    color:blue;
+}
+
+input[type=search] {
+    height:25px;
+    width:220px;
+
+}

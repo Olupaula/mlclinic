@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+
+{% block head %} <title>Diabetics Test Result</title>{% endblock %}
+
+<div>
+    <p class="links" style="text-align:left; margin-top:140px; padding-top:20px;">
+        <a href="{% url 'diabetes' %}"  >&#8592  Diabetics Predictor</a>
+    </p>
+</div>
+
+{% if b.accuracy == None %}
+<div class="result">
+    <h3>Test Result</h3>
+    <p style="text-align:center;">No result yet. Go back and enter the appropriate metrics. </p>
+</div>
+  {% else %}
+<div class="result">
+    <h3>Test Result</h3>
+    <p>The analysis suggests that the patient is {{b.predicted_target}}</p>
+    <p>Accuracy: {{b.accuracy}}</p>
+    <p>Recall: {{b.recall}}</p>
+    <p>Precision: {{b.precision}}</p>
+{% endif %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>Diabetics Test Result</title>{% endblock %}
+
+{% block body %}
+
+<div class="result_container">
+<div class="side0_result">
+    {% if bc_record %}
+        <span><a href="{% url 'bc_registered' patient.id %}">Breast Cancer Predictor</a ></span>
+    {% else %}
+        <span style="color:transparent">No Breast Cancer Result</span>
+    {% endif %}
+    <span style="float:right"><a href="{% url 'current_patient_' patient.id %}">Patient Profile</a ></span>
+</div>
+
+<div class="side1_result" >
+    <div class="patient_result_header" >
+        <h3>Diabetes Test Result</h3>
+    </div>
+    <div class="side1_r">
+        <table>
+            <tr>
+                <td><b>Full Name </b></td>
+                <td>{{patient.first_name}} {{patient.last_name}}</td>
+            </tr>
+            <tr>
+                <td><b>Patient Id</b></td>
+                <td>{{patient.id}}</td>
+            </tr>
+
+            <tr>
+                <td><b>Phone Number</b></td>
+                <td><b>{{patient.phone_number}}</b></td>
+            </tr>
+            <tr>
+                <td><b>Email Address</b></td>
+                <td> {{patient.email_address}}</td>
+            </tr>
+                <td><b>Age</b></td>
+                <td>{{patient.age}}</td>
+            </tr>
+        <tr>
+            <td><b>Number of Pregnancy</b></td>
+            <td>{{d_record.no_of_pregnancy}}</td>
+        </tr>
+        <tr>
+            <td><b>Glucose Level</b></td>
+            <td>{{d_record.glucose_level}}</td>
+        </tr>
+        <tr>
+            <td><b>Blood Pressure</b></td>
+            <td>{{d_record.blood_pressure}}</td>
+        </tr>
+        <tr>
+            <td><b>Skin Thickness</b></td>
+            <td>{{d_record.skin_thickness}}</td>
+        </tr>
+        <tr>
+            <td><b>Insulin</b></td>
+            <td>{{d_record.insulin}}</td>
+        </tr>
+        <tr>
+            <td><b>BMI</b></td>
+            <td>{{d_record.bmi}}</td>
+        </tr>
+        <tr>
+            <td><b>Pedigree Function</b></td>
+            <td>{{d_record.diabetes_pedigree_function}}</td>
+        </tr>
+            <tr>
+                <td><b><b>Conclusion</b></b></td>
+                <td><b>{{d_result.predicted_target}}</b></td>
+            </tr>
+            <tr>
+                <td><b>Accuracy</b></td>
+                <td>{{d_result.accuracy}}</td>
+            </tr>
+            <tr>
+                <td><b>Recall</b></td>
+                <td>{{d_result.recall}}</td>
+            </tr>
+            <tr>
+                <td><b>Precision</b></td>
+                <td>{{d_result.precision}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+<!--<div class="side1_r">
+            <div class="patient_result_pre">
+            <p>Full Name: {{patient.first_name}} {{patient.last_name}}</p>
+            <p>Patient Id: {{patient.id}}</p>
+            <p>Phone Number: {{patient.phone_number}}</p>
+            <p>Email Address: {{patient.email_address}}</p>
+            <p>Age: {{patient.age}}</p>
+            </div>
+    </div>
+
+-->

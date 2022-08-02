@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>Registration Successful</title>{% endblock %}
+{% block body %}
+
+<div style="margin-top:200px; text-align:center;">
+    <p>You have registered <b style="color:purple; text-transform:uppercase;">{{patient.first_name}} {{patient.last_name}}</b>.
+        To work on this patient's file, <a href="{% url 'current_patient_' patient.id %}">click Here</a></p>
+</div>
+{% endblock %}
+

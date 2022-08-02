@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% include 'navbar.html' %}
+
+{% block head %} <title>Edit Patient's Record</title>{% endblock %}
+
+{% block body %}
+
+<div class="edit_patient_another" >
+    <p>see a different <a href="{% url 'see_a_patient' %}">patient</a></p>
+</div>
+
+<div class="edit_patient_header">
+    <div><h2>Edit Patient Record</h2></div>
+</div>
+
+<div class="edit_patient" >
+    <div class="side1_edit">
+        <h3>Patient Details</h3>
+        <div id="profile_photo" ><img src="{{patient.photo.url}}" height="110" width="105"></div>
+        <p>{{patient.first_name}} {{patient.last_name}}</p>
+
+        <div class="all_choice_buttons" >
+            <div class="choice_button" class="delete_button"><a href="{% url 'delete_patient_record' patient.id %}">Delete Record</a></div>
+        </div>
+    </div>
+    <div  class="side2_edit">
+        <form method="POST" style="background:white;" class="edit_form">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>{{field.label}}</p>
+            <p>{{field}}</p>
+            {% endfor %}
+            <input type="submit" value="save">
+        </form>
+
+    </div>
+
+    <div class="side3_edit">
+        <h3>Edit</h3>
+         {% if bc_record %}
+            <p><a href="{% url 'edit_breast_cancer' patient.id %}"> Edit Breast Cancer Metrics</a></p>
+        {% else %}
+            <p>  No Breast Cancer Metric. <a href="{% url 'create_bc_record' patient.id %}">Enter BreastCancer Metric</a></p>
+        {% endif %}
+
+
+        {% if d_record %}
+        <p><a href="{% url 'edit_diabetes' patient.id %}"> Edit Diabetes Metrics</a></p>
+
+        {% else %}
+        <p> No Diabetes Metric. <a href="{% url 'create_d_record' patient.id %}">Enter Diabetes Metric</a></p>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}
+
