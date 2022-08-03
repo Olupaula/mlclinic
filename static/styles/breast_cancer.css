@@ -43,6 +43,16 @@ body {
 }
 
 
+.menu_display {
+     line-height:2.0;
+     margin:200px auto 0 auto;
+     color:rgb(40, 40, 40);
+     background:rgb(230,230,230);
+     padding:50px;
+     width:60%;
+     text-align:justify;
+
+}
 
 form_div {
     text-align:center;
@@ -1293,16 +1303,48 @@ table {
     text-align:center;
 }
 
-.list_all_patients {
-    padding-top:140px;
-    padding-left:30px;
-    text-align:center;
-    background:rgb(200,200,200);
-    height:900px;
+
+
+@media screen and (max-width:640px){
+    .list_all_patients {
+        padding-top:140px;
+        text-align:center;
+        background:rgb(200,200,200);
+        width:800px;
+        overflow-x:scroll;
+        padding-right:20px;
+        padding-left:20px;
+        padding-bottom:900px;
+
+
+    }
+
+    list_all_patients table {
+        margin-right:10px;
+        margin-left:10px;
+
+    }
+
 }
 
-.list_all_patients table{
-    margin:auto;
+@media screen and (min-width:641px){
+    .list_all_patients {
+        padding-top:140px;
+        text-align:center;
+        background:rgb(200,200,200);
+        height:auto;
+        width:auto;
+        overflow-x:scroll;
+        padding-right:20px;
+        padding-left:20px;
+        padding-bottom:900px;
+    }
+
+
+    .list_all_patients table{
+        margin:auto;
+    }
+
 }
 
 .list_all_patients .nav_all{

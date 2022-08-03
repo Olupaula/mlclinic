@@ -13,11 +13,13 @@
     <span class="links" style="text-align:right; float:right; margin-top:20px; margin-right:40px"> <a href="{% url 'diabetes_result' %}"  > Last Result &#8594 </a></span>
 
    <div id="pre" style="clear:both;"> <h2>Predictor for Diabetes</h2>
-       <p style="color:darkblue">
-           This test is for unregistered patients.
-           To check for registered patient,
-           <span class="links" style="margin-left:-35px;"><a href="{% url 'see_a_patient' %}" >Click Here</a></span>
-       </p>
+      {% if request.user.is_authenticated %}
+           <p style="color:darkblue">
+               This test is for unregistered patients.
+               To check for registered patient,
+               <span class="links" style="margin-left:-35px;"><a href="{% url 'see_a_patient' %}" >Click Here</a></span>
+           </p>
+       {% endif %}
         <h4 style="color:rgb(60,60,60)">Enter Patients Metrics For Prediction</h4>
     </div>
 
