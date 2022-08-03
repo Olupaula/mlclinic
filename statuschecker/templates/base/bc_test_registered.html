@@ -8,11 +8,11 @@
 <div class="result_container" >
 <div class="side0_result">
     {% if d_record %}
-        <span><a href="{% url 'd_registered' patient.id %}">Diabetes Predictor</a ></span>
+        <span class="right" ><a href="{% url 'd_registered' patient.id %}">Diabetes Predictor &#8594 </a ></span>
     {% else %}
-        <span style="color:transparent">No Diabetes Result</span>
+        <span class="right" style="color:transparent">No Diabetes Result</span>
     {% endif %}
-    <span style="float:right"><a href="{% url 'current_patient_' patient.id %}">Patient Profile</a ></span>
+    <span class="left"><a href="{% url 'current_patient_' patient.id %}">&#8592 Patient Profile</a ></span>
 
 </div>
 
@@ -90,7 +90,7 @@
 
             <tr>
                 <td><b>Conclusion</b></td>
-                <td>{{bc_result.predicted_target}}</b></td>
+                <td {% if bc_result.predicted_target == 'Malignant' %} style="color:red;" {% endif %}><b>{{bc_result.predicted_target}}</b></td>
             </tr>
 
             <tr>

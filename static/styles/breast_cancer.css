@@ -1258,51 +1258,112 @@ table {
 
 }
 
-*/
-.result_container {
-    background:rgb(210,210,210);
-    padding-top:30px;
-    height:900px;
+@media screen and (min-width:641px){
+    .result_container {
+        background:rgb(210,210,210);
+        padding-top:30px;
+        height:auto;
+        padding-bottom:50px;
+    }
+
+    .patient_result_header {
+        text-align:center;
+    }
+
+    .side0_result {
+        margin-right:50px;
+        margin-left:50px;
+        margin-top:150px;
+    }
+
+    .side0_result a {
+        color:darkgreen;
+        text-decoration:none;
+      }
+
+    .side0_result a:hover {
+        color:blue;
+    }
+
+    .side0_result .left{
+
+         }
+
+     .side0_result .right{
+        float:right;
+     }
+
+    .side1_result table {
+        margin:auto;
+        margin-bottom:50px;
+    }
+
+    .side1_result tr td {
+        margin:auto;
+        font-size:14px;
+
+
+    }
+
+    .side1_result h3{
+        text-align:center;
+    }
 
 }
 
-.patient_result_header {
-    text-align:center;
+
+@media screen and (max-width:640px){
+      .result_container {
+        background:rgb(210,210,210);
+        padding-top:30px;
+        height:auto;
+        padding-bottom:50px;
+    }
+
+    .patient_result_header {
+        text-align:center;
+
+    }
+
+    .side0_result {
+        margin-right:50px;
+        margin-left:50px;
+        margin-top:150px;
+    }
+
+    .side0_result a {
+        color:darkgreen;
+        text-decoration:none;
+      }
+
+     .side0_result span{
+        display:block;
+        text-align:justify;
+        padding-bottom:10px;
+     }
+
+    .side0_result a:hover {
+        color:blue;
+    }
+
+
+    .side1_result table {
+        margin:auto;
+        margin-bottom:50px;
+    }
+
+    .side1_result tr td {
+        margin:auto;
+        font-size:14px;
+
+
+    }
+
+    .side1_result h3{
+        text-align:center;
+    }
 
 }
-
-.side0_result {
-    margin-right:50px;
-    margin-left:50px;
-    margin-top:150px;
-}
-
-.side0_result a {
-    color:darkgreen;
-    text-decoration:none;
-  }
-
-.side0_result a:hover {
-    color:blue;
-}
-
-
-.side1_result table {
-    margin:auto;
-    margin-bottom:50px;
-}
-
-.side1_result tr td {
-    margin:auto;
-    font-size:14px;
-
-
-}
-
-.side1_result h3{
-    text-align:center;
-}
-
 
 
 @media screen and (max-width:640px){
@@ -1315,8 +1376,6 @@ table {
         padding-right:20px;
         padding-left:20px;
         padding-bottom:900px;
-
-
     }
 
     list_all_patients table {
