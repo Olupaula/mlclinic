@@ -17,7 +17,6 @@ class PatientForm(ModelForm):
         })
 
 
-
 class BreastCancerForm(ModelForm):
     class Meta:
         model = BreastCancer

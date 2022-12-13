@@ -1,4 +1,13 @@
-import sklearn
+y = [
+    # this one is for things
+    'add',
+    # second is to test
+    'get'
+]
+
+print(y)
+
+"""import sklearn
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
@@ -130,4 +139,4 @@ class DiabeticsTest:
 result1 = DiabeticsTest()
 
 put = np.array([0.2, 0.1, 0.3, 0.1])
-print(result1.predictor(put))
+print(result1.predictor(put))"""

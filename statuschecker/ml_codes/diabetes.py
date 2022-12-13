@@ -130,7 +130,8 @@ class DiabetesTest:
     print("\nNames of the y's \n", 'length =', len(labels),'\n', labels)'''
 
 
-result1 = DiabetesTest()
+'''result1 = DiabetesTest()
 
 put = np.array([0.2, 0.1, 0.3])
 print(result1.predictor(put))
+'''
