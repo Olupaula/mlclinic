@@ -1,11 +1,9 @@
 Django<=4.0.4
 django-cloudinary-storage==0.3.0
-django-cors-headers==3.13.0
-django-on-heroku==1.1.2
-django-phonenumber-field==6.3.0
-django-tinymce==3.5.0
-django-utils-six==2.0
-djangorestframework==3.13.1
+django-phonenumber-field<=6.3.0
+django-tinymce<=3.5.0
+django-utils-six<=2.0
+djangorestframework<=3.13.1
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0-py3-none-any.whl
 entrypoints==0.4
 numpy==1.22.3
