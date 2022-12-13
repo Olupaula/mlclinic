@@ -1,4 +1,4 @@
-Django==4.0.4
+Django<=4.0.4
 django-cloudinary-storage==0.3.0
 django-cors-headers==3.13.0
 django-on-heroku==1.1.2
