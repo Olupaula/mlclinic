@@ -6,18 +6,18 @@ likely to have: (a) breast cancer (b) diabetes.
  
 ## Technologies used:
 1. Python:
- - Django
+   - Django
 2. JavaScript (Vanila):
- - Ajax 
+   - Ajax 
 3. Html:
 4.css
 
 ## Machine Learning 
 packages used:
 1. Python:
- - Sklearn
- - numpy
- - pandas
+   - Sklearn
+   - numpy
+   - pandas
 
 ### Data:
 1. Breast Cancer Dataset and 
