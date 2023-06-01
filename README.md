@@ -6,7 +6,7 @@ likely to have: (a) breast cancer (b) diabetes.
  
 ## Technologies used:
 1. Python:
-   - Django
+   - Django (templates, ORM)
 2. JavaScript (Vanila):
    - Ajax 
 3. Html:
