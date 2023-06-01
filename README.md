@@ -4,7 +4,7 @@ the registered doctors can then register patients and input and save thier bio-d
 measures on the patient's health status. The web app can then be used to predict whether a patient is 
 likely to have: (a) breast cancer (b) diabetes. 
  
-Programming Language used:
+Computer Languages used:
 1. Python:
  - Machine Learning: Sklearn, numpy and pandas
  - Web Site: Django
